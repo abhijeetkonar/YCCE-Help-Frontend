@@ -11,7 +11,7 @@ const SignIn = (props) => {
         e.preventDefault()
         const email = e.target.email.value
         const password = e.target.password.value
-        axios.post(`$https://ycce-help-backend.onrender.com/user/signin`, { email, password })
+        axios.post(`https://ycce-help-backend.onrender.com/user/signin`, { email, password })
             .then(res => {
                 const token = res.data.token
                 localStorage.setItem('token', token)
