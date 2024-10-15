@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.root {
+    overflow-x: hidden;
+}
+
+nav .active {
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+footer .active {
+    color: #03DAC6;
+}
+
+/* .toast-position {
+    top: 4rem !important;
+} */
+
+
