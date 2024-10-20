@@ -112,7 +112,7 @@ const Profile = () => {
         .then(() => {
 
           // API call to delete the contribution
-          return axios.delete(`https://ycce-help-backend.onrender.com//user/contributions/${type}/${id}`, {
+          return axios.delete(`https://ycce-help-backend.onrender.com/user/contributions/${type}/${id}`, {
             headers: {
               Authorization: `Bearer ${localStorage.getItem('token')}`,
             },
