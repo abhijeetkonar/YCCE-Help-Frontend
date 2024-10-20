@@ -9,6 +9,7 @@ import Upload from './pages/Upload';
 import Practicals from './pages/Practicals';
 import AppLayout from './components/AppLayout';
 import ProtectRoute from './components/ProtectRoute';
+import NotFound from './pages/NotFound'
 
 const App = () => {
     const router = createBrowserRouter([
@@ -55,6 +56,10 @@ const App = () => {
                             element: <Upload />,
                         },
                     ]
+                },
+                {
+                    path: "*",
+                    element: <NotFound />,  
                 },
             ]
         },
