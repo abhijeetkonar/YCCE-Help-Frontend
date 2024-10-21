@@ -201,7 +201,7 @@ const Profile = () => {
             />
           </div> :
           <>
-            {type === 'papers' ? papers.map((paper) => (
+            {type === 'papers' && papers.length && papers.map((paper) => (
               <FileSection
                 key={paper._id}
                 value="Paper Type : "
@@ -217,7 +217,8 @@ const Profile = () => {
                 handleDelete={handleDelete}
                 id={paper._id}
               />
-            )) : practicals.map((practical) => (
+            ))}
+            {type === 'practicals' && practicals.length && practicals.map((practical) => (
               <FileSection
                 key={practical._id}
                 value={`Practical No. : `}
