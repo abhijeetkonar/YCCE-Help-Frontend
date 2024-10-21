@@ -119,14 +119,6 @@ const Profile = () => {
           });
         })
         .then((res) => {
-          // Update state based on the type
-          if (type === 'papers') {
-            setPapers(res.data.papers);
-          } else {
-            setPracticals(res.data.practicals);
-          }
-
-          // Toggle deleteContribution state to trigger UI re-render
           setDeleteContribution(!deleteContribution);
         }),
 
@@ -134,7 +126,7 @@ const Profile = () => {
       {
         pending: 'Deleting contribution...',
         success: 'Contribution deleted successfully!',
-        error: 'Failed to delete the contribution. Please try again. 😢'
+        error: 'Failed to update profile. Please try again. 😢'
       }
     ).catch((err) => {
       console.log(err);
